@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Abastecimento</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#historico">Histórico</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>Calculadora de Abastecimento</h1>
+            <p>Calcule quando vai ser seu próximo abastecimento </p>
+        </div>
+    </header>
+
+    <main>
+        <form id="fuelForm">
+            <div class="calc-mode-selector">
+                <label for="calculationMode">Escolha a forma de calcular:</label>
+                <select id="calculationMode" name="calculationMode">
+                    <option value="autonomia">Por autonomia atual</option>
+                    <option value="abastecimento">Por valor e litros abastecidos</option>
+                </select>
+            </div>
+
+            <div id="autonomyFields" class="form-mode-group">
+                <label for="lastFuelDate">Data do último abastecimento:</label>
+                <input type="date" id="lastFuelDate" name="lastFuelDate">
+
+                <label for="currentAutonomy">Autonomia atual do veículo (km):</label>
+                <input type="number" id="currentAutonomy" name="currentAutonomy" step="0.01" placeholder="Ex: 320">
+
+                <label for="avgDailyDistance">Distância média diária (km/dia):</label>
+                <input type="number" id="avgDailyDistance" name="avgDailyDistance" step="0.01" placeholder="Ex: 45">
+            </div>
+
+            <div id="refuelFields" class="form-mode-group hidden">
+                <label for="refuelDate">Data do abastecimento:</label>
+                <input type="date" id="refuelDate" name="refuelDate">
+
+                <label for="refuelValue">Valor total do abastecimento (R$):</label>
+                <input type="number" id="refuelValue" name="refuelValue" step="0.01" placeholder="Ex: 250,00">
+
+                <label for="litersFilled">Quantidade de litros abastecidos:</label>
+                <input type="number" id="litersFilled" name="litersFilled" step="0.01" placeholder="Ex: 40">
+
+                <label for="pricePerLiter">Valor por litro (R$):</label>
+                <input type="number" id="pricePerLiter" name="pricePerLiter" step="0.01" placeholder="Ex: 6,29">
+
+                <label for="averageConsumption">Consumo médio do carro (km/l):</label>
+                <input type="number" id="averageConsumption" name="averageConsumption" step="0.01"
+                    placeholder="Ex: 11,5">
+
+                <label for="dailyDistanceByRefuel">Distância média diária (km/dia):</label>
+                <input type="number" id="dailyDistanceByRefuel" name="dailyDistanceByRefuel" step="0.01"
+                    placeholder="Ex: 50">
+            </div>
+
+            <button type="submit">Calcular próximo abastecimento</button>
+
+        </form>
+        <section id="inicio" class="resultado">
+            <h2>Calculadora de Abastecimento</h2>
+            <p>Use a calculadora acima para estimar quando será necessário abastecer novamente com base na distância
+                percorrida e no consumo médio do seu veículo.</p>
+
+
+            <div id="result"></div>
+        </section>
+        <section id="historico" class="historico">
+            <h2>Histórico de Abastecimento</h2>
+            <ul id="history"></ul>
+        </section>
+        <section class="dicas">
+            <h2>Dicas para Economizar Combustível</h2>
+            <ul>
+                <li>Mantenha os pneus calibrados.</li>
+                <li>Evite acelerações bruscas e frenagens desnecessárias.</li>
+                <li>Use o ar-condicionado com moderação.</li>
+                <li>Planeje suas rotas para evitar congestionamentos.</li>
+                <li>Realize manutenção regular do veículo.</li>
+            </ul>
+        </section>
+        <section class="curiosidades">
+            <h2>Curiosidades sobre Combustível</h2>
+            <ul>
+                <li>O primeiro carro movido a combustível foi criado por Karl Benz em 1885.</li>
+                <li>O petróleo é a principal fonte de combustível no mundo.</li>
+                <li>Existem combustíveis alternativos, como etanol e biodiesel, que são mais sustentáveis.</li>
+                <li>A eficiência do combustível pode variar dependendo do tipo de veículo e das condições de condução.
+                </li>
+            </ul>
+        </section>
+        <section id="contato" class="contato">
+            <h2>Contato</h2>
+            <p>Se você tiver dúvidas ou sugestões, entre em contato conosco através do email: <a
+                    href="mailto:joaquimdeaquino@gmail.com">joaquimdeaquino@gmail.com</a></p>
+            <p>Ou também através do nosso formulário de Feedback.</p>
+            <h2>Formulário de Feedback</h2>
+            <form id="contactForm">
+                <fieldset>
+                    <legend>Entre em contato conosco</legend>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required placeholder="Escreva sua mensagem aqui"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Calculadora de Abastecimento. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #65f499;
+	background: linear-gradient(180deg, #00ff7f 0%, #00bfff 100%);
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+
+	--background: #f0f8f3;
+	--paragrafo: #3a6b5a;
+	--h1: #1b7d5e;
+	--h2: #2d9b73;
+	--font-base: #2d5a4d;
+	--link: #1b7d5e;
+	--link-hover: #0f4a38;
+}
+
+/* <-- // comeco do header // --> */
+
+header {
+	background-color: var(--h1);
+	color: white;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	height: 150px;
+}
+
+.header-content {
+	grid-column: 2;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.header-content h1 {
+	margin: 0;
+	line-height: 1.1;
+}
+
+.header-content p {
+	margin: 4px 0 0;
+}
+
+nav {
+	grid-column: 1;
+	display: flex;
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin-left: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+nav a:hover {
+	color: var(--link-hover);
+}
+
+/* <-- // fim do header // --> */
+
+main {
+	padding: 20px;
+}
+
+section {
+	background-color: white;
+	text-align: left;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+form {
+	background-color: white;
+	text-align: left;
+	padding: 30px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+.calc-mode-selector {
+	width: 95%;
+	margin-bottom: 15px;
+}
+
+.calc-mode-selector select {
+	width: 100%;
+}
+
+.form-mode-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.hidden {
+	display: none;
+}
+
+input[type="number"],
+input[type="date"],
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+	width: 95%;
+	box-sizing: border-box;
+	padding: 8px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	align-items: center;
+}
+
+input[type="submit"] {
+	background-color: var(--h2);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	align-items: center;
+}
+
+input[type="submit"]:hover {
+	background-color: var(--link-hover);
+}
+
+button {
+	background-color: var(--h2);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	align-items: center;
+	transition: background-color 0.2s ease;
+}
+
+button:hover {
+	background-color: var(--link-hover);
+}
+
+.history-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 14px 0;
+	border-bottom: 1px solid #eee;
+	gap: 16px;
+	line-height: 1.8;
+}
+
+.history-item-content {
+	flex: 1;
+}
+
+.history-item .btn-remover {
+	background-color: #e74c3c;
+	padding: 6px 12px;
+	font-size: 0.85rem;
+	flex-shrink: 0;
+	margin-left: 16px;
+}
+
+.history-item .btn-remover:hover {
+	background-color: #c0392b;
+}
+
+a {
+	color: var(--link);
+	text-decoration: none;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+textarea {
+	resize: vertical;
+}
+
+footer {
+	background-color: var(--h1);
+	color: white;
+	text-align: center;
+}
+
+footer p {
+	margin: 0;
+}
